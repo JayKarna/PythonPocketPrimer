@@ -3,55 +3,47 @@ Create a set of custom Python classes that model the relationships that exist am
 rhombus, and square
 """
 class quadrilateral:
-	def __init__(self):
+	def func(self):
 		print('This is a quadrilateral')
 
-	def funcq(self):
-		print('This is also a quadrilateral')
-
 class parallelogram(quadrilateral):
-	def __init__(self):
+	def func(self):
 		print('This is a parallelogram')
-
-	def funcp(self):
-		print('This is also a parallelogram')
+		super().func()
 
 class rectangle(parallelogram):
-	def __init__(self):
+	def func(self):
 		print('This is a rectangle')
-
-	def funcre(self):
-		print('This is also a rectangle')
+		super().func()
 
 class rhombus(parallelogram):
-	def __init__(self):
+	def func(self):
 		print('This is a rhombus')
-
-	def funcrh(self):
-		print('This is also a rhombus')
+		super().func()
 
 class square(rectangle, rhombus):
-	def __init__(self):
+	def func(self):
 		print('This is a square')
+		super().func()
 
 if __name__ == '__main__':
 	shapeA = quadrilateral()
+	shapeA.func()
+	print()
 
 	shapeB = parallelogram()
-	shapeB.funcq()
+	shapeB.func()
+	print()
 
 	shapeC = rectangle()
-	shapeC.funq()
-	shapeC.funcp()
+	shapeC.func()
+	print()
 
 	shapeD = rhombus()
-	shapeD.funq()
-	shapeD.funcp()
+	shapeD.func()
+	print()
 
 	shapeE = square()
-	shapeE.funcq()
-	shapeE.funcp()
-	shapeE.funcre()
-	shapeE.funcrh()
+	shapeE.func()
 
 	
